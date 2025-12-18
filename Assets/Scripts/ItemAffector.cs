@@ -76,11 +76,6 @@ public class ItemAffector : MonoBehaviour
         _isSelected = false;
     }
 
-    /*private void OnMouseOver()
-    {
-        CurrentItemSelected?.Invoke(gameObject);
-    }*/
-
     private void Multiply(int number)
     {
         if(_isSelected)

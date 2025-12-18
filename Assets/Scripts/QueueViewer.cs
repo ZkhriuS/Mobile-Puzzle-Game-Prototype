@@ -23,7 +23,7 @@ public class QueueViewer : MonoBehaviour
         _holderList = new List<RectTransform>();
         CreateHolders(holderHeight, holderWidth);
         SetDeck(holderHeight, holderWidth);
-        ItemSettler.NextStep += ViewSelector;
+        Field.Selected += ViewSelector;
         Field.Deselected += HideSelector;
     }
 
@@ -68,9 +68,10 @@ public class QueueViewer : MonoBehaviour
         }
     }
 
-    private void ViewSelector(int index)
+    private void ViewSelector(Vector3 position, int index)
     {
-        _holderList[index].GetComponent<SelectorViewer>().Enable(true);
+        HideSelector();
+        _holderList[index-1].GetComponent<SelectorViewer>().Enable(true);
     }
     
     private void HideSelector()

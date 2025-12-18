@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,7 @@ public class SelectorViewer : MonoBehaviour
 {
     [SerializeField] private GameObject selectorPanel;
     private int _multiplier;
+
     // Start is called before the first frame update
     void Start()
     {
